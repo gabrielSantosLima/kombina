@@ -1,0 +1,11 @@
+{
+  "name": "kombina",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Gabriel Lima <bielsantoslima10@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0"
+  }
+}
