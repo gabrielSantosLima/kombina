@@ -2,6 +2,7 @@
   "name": "kombina",
   "version": "1.0.0",
   "main": "index.js",
+  "description": "Aplicação para combinação dinâmica de números",
   "private": true,
   "scripts": {
     "watch": "webpack --config webpack.config.js --watch"
