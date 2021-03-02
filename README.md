@@ -32,7 +32,7 @@ git clone https://github.com/gabrielSantosLima/kombina
 cd kombina
 
 # Instale todas as dependências
-yarn
+yarn install
 
 # Execute a aplicação em modo de desenvolvimento
 yarn run watch

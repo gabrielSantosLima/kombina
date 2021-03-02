@@ -3499,6 +3499,11 @@ pause-stream@0.0.11:
   dependencies:
     through "~2.3"
 
+percom@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/percom/-/percom-1.1.0.tgz#5f68a561950e7ddbb6ba1ec8cb4dede2a506c646"
+  integrity sha512-srWPRdiw5b1uzNoVl41TxLLhIOg+FfswX85FVIeRQM2oR+J373Mdl5jZUChse7JyBE3wH/yao7WcsoIKeFPtiQ==
+
 performance-now@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
