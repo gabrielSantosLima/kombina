@@ -39,6 +39,6 @@ yarn run watch
 ```
 ## Autor
 <div>
-<img src="https://github.com/gabrielSantosLima.png" style="width: 100px; heigth: 100px; border-radius: 50%; align-self: center;">
+  <img src="https://github.com/gabrielSantosLima.png" width= "100" heigth= "100">
 </div>
 :bulb: Técnico em informática formado pelo IFAM - Instituo Federal do Amazonas
