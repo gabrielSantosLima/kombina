@@ -6,6 +6,7 @@
   "private": true,
   "scripts": {
     "test": "jest",
+    "lint": "eslint",
     "watch": "webpack --config webpack.config.js --watch | live-server --port=8080 dist/ "
   },
   "author": "Gabriel Lima <bielsantoslima10@gmail.com>",
