@@ -1,15 +1,17 @@
 const { com } = require('percom')
+const _ = require('lodash')
 
-function Combination(){
+module.exports = function Combination(){
     
-	function combine(numbers = [], sizeOfSequences){
-		const totalNumbers = numbers.length
-		const totalNumbersInGroup = numbers[0].length
-		const combinations = sizeOfSequences / totalNumbersInGroup
+	function combine(groups = [], sequenceSize){
+		const totalGroups = groups.length
+		const totalNumbersInGroup = groups[0].length
+		const combinations = sequenceSize / totalNumbersInGroup
 
-		const numberArray = toNumberArray(totalNumbers)
+		const numberArray = toNumberArray(totalGroups)
 		const groupsCombination = com(numberArray, combinations)
-		return keysToSequence(groupsCombination, numbers)
+		
+		return keysToSequence(groupsCombination, groups)
 	}
 
 	function toNumberArray(lastNumber = undefined){
@@ -23,17 +25,19 @@ function Combination(){
 		return keyNumbers
 	}
 
-	function keysToSequence(keys, numbers){
+	function keysToSequence(keys, groups){
 		let sequences = []
 		keys.forEach(key => {
-			const sequence = key.map(n => {
-				const number = numbers[n-1]
-				if(!number){
+			const sequence = key.map(number => {
+				const value = groups[number - 1]
+				if(!value){
 					throw new Error('Sequência inválida.')
 				}
-				return number
+				return value
 			})
-			sequences.push(sequence)  
+			const concatSequence = _.concat(...sequence)
+			const sortedConcatSequence = concatSequence.sort((a,b)=> a - b)
+			sequences.push(sortedConcatSequence)  
 		})
 		return sequences
 	}
@@ -44,5 +48,3 @@ function Combination(){
 		keysToSequence
 	}
 }
-
-module.exports = Combination

@@ -1,24 +1,33 @@
-test('Deve resultar em 4', ()=>{
-    expect(2+2).toBe(4)
-})
-// test('Sequência não deve ter números repetidos', ()=> {
-//     const combination = Combination()
-//     const numbers = [
-//         [1,2],
-//         [1,5],
-//         [7,8]
-//     ]
-//     expect(combination.combine(numbers, 4))
-//         .toThrow('A sequência de números não pode conter números repetidos.')
-// })
+const Input = require('../src/services/Input')
 
-// test('Sequência não deve ter números faltando', ()=> {
-//     const combination = Combination()
-//     const numbers = [
-//         [1],
-//         [1,5],
-//         [7]
-//     ]
-//     expect(combination.combine(numbers, 4))
-//         .toThrow('Quantidade de elementos incorreta.')
-// })
+test('Sequência não deve ter números repetidos', ()=> {
+	const input = Input()
+	const numbers = [
+		[1,2],
+		[1,5],
+		[7,8]
+	]
+	expect(() => input.onCombine(numbers, 4, 2))
+		.toThrow('A sequência de números não pode conter números repetidos.')
+})
+
+test('Deve resultar em erro quando houver quantidades insuficientes de números', ()=> {
+	const input = Input()
+	const numbers = [
+		[1,2],
+		[3,4]
+	]
+	expect(() => input.onCombine(numbers, 6, 2))
+		.toThrow('A sequência de números não possui números suficientes.')
+})
+
+test('Sequência não deve ter números faltando', ()=> {
+	const input = Input()
+	const numbers = [
+		[1],
+		[2,5],
+		[7]
+	]
+	expect(() => input.onCombine(numbers, 4, 2))
+		.toThrow('Quantidade incorreta de elementos por grupo.')
+})
