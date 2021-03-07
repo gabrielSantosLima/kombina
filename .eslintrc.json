@@ -25,6 +25,14 @@
         "semi": [
             "error",
             "never"
+        ],
+        "key-spacing": [
+            "error",
+            {
+                "afterColon": true,
+                "beforeColon": true,
+                "mode": "strict"
+            }
         ]
     }
 }
