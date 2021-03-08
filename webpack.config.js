@@ -2,7 +2,8 @@ const path = require('path')
 module.exports = {
 	mode: 'development',
 	devServer: {
-		contentBase: './dist',
+		contentBase: 'dist/',
+		watchContentBase: true
 	},
 	entry : './src/index.js',
 	output : {

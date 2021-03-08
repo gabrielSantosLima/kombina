@@ -13,9 +13,12 @@
   "author": "Gabriel Lima <bielsantoslima10@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "bootstrap": "^4.6.0",
     "css-loader": "^5.1.1",
+    "jquery": "^3.6.0",
     "lodash": "^4.17.21",
     "percom": "^1.1.0",
+    "popper.js": "^1.16.1",
     "style-loader": "^2.0.0",
     "webpack": "^5.24.2",
     "webpack-cli": "^4.5.0"
