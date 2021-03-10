@@ -1,14 +1,13 @@
 {
   "name": "kombina",
   "version": "1.0.0",
-  "main": "src/index.js",
   "description": "Aplicação para combinação dinâmica de números",
   "private": true,
   "scripts": {
     "test": "jest",
-    "start": "webpack serve --open --no-stats",
+    "start": "webpack serve --hot --no-stats --mode development",
     "lint": "eslint src --ext js",
-    "dev": "webpack --config webpack.config.js --watch"
+    "dev": "webpack --config webpack.config.js"
   },
   "author": "Gabriel Lima <bielsantoslima10@gmail.com>",
   "license": "MIT",
@@ -19,13 +18,14 @@
     "lodash": "^4.17.21",
     "percom": "^1.1.0",
     "popper.js": "^1.16.1",
-    "style-loader": "^2.0.0",
-    "webpack": "^5.24.2",
-    "webpack-cli": "^4.5.0"
+    "style-loader": "^2.0.0"
   },
   "devDependencies": {
     "eslint": "^7.21.0",
+    "html-webpack-plugin": "^5.3.1",
     "jest": "^26.6.3",
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0",
     "webpack-dev-server": "^3.11.2"
   }
 }
