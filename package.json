@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest",
     "start": "webpack serve --hot --no-stats --mode development",
-    "lint": "eslint src --ext js",
+    "lint": "eslint src --ext js --fix",
     "build": "webpack --mode production --config webpack.config.js"
   },
   "author": "Gabriel Lima <bielsantoslima10@gmail.com>",
