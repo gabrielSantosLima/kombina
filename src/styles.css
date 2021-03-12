@@ -3,3 +3,17 @@
 *, button, textarea, input {
     font-family: 'Ubuntu', sans-serif;
 }
+
+.group input::-webkit-inner-spin-button,
+.group input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+}
+
+.group input[type=number]{
+   -moz-appearance: textfield; 
+}

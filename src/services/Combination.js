@@ -1,4 +1,4 @@
-const { com } = require('percom')
+const { com, countCom } = require('percom')
 const { concat, pull } = require('lodash')
 
 module.exports = function Combination(){
@@ -86,11 +86,16 @@ module.exports = function Combination(){
 		return sequences.map(sequence => sortSequence(concat(sequence, fixedNumbers)))
 	}
 
+	function countCombinations(numbersOfElements, combinations){
+		return countCom(numbersOfElements,combinations)
+	}
+
 	return {
 		combine,
 		getGroupsWithoutFixedNumbers,
 		combineWithFixedNumbers,
 		toNumberArray,
-		keysToSequence
+		keysToSequence,
+		countCombinations
 	}
 }

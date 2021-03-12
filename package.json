@@ -7,12 +7,13 @@
     "test": "jest",
     "start": "webpack serve --hot --no-stats --mode development",
     "lint": "eslint src --ext js",
-    "dev": "webpack --config webpack.config.js"
+    "build": "webpack --mode production --config webpack.config.js"
   },
   "author": "Gabriel Lima <bielsantoslima10@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^4.6.0",
+    "bootstrap-icons": "^1.4.0",
     "css-loader": "^5.1.1",
     "jquery": "^3.6.0",
     "lodash": "^4.17.21",
