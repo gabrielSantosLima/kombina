@@ -1,7 +1,6 @@
-const Input = require('../src/services/Input')
+const input = require('../src/services/Input')()
 
 test('Sequência não deve ter números repetidos', ()=> {
-	const input = Input()
 	const numbers = [
 		[1,2],
 		[1,5],
@@ -12,7 +11,6 @@ test('Sequência não deve ter números repetidos', ()=> {
 })
 
 test('Deve resultar em erro quando houver quantidades insuficientes de números', ()=> {
-	const input = Input()
 	const numbers = [
 		[1,2],
 		[3,4]
@@ -22,7 +20,6 @@ test('Deve resultar em erro quando houver quantidades insuficientes de números'
 })
 
 test('Sequência não deve ter números faltando', ()=> {
-	const input = Input()
 	const numbers = [
 		[1],
 		[2,5],
