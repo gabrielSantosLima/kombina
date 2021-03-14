@@ -35,7 +35,7 @@ cd kombina
 yarn install
 
 # Execute a aplicação em modo de desenvolvimento
-yarn run watch
+yarn start
 ```
 ## Autor
 <div>

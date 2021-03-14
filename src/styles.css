@@ -2,6 +2,7 @@
 
 *, button, textarea, input {
     font-family: 'Ubuntu', sans-serif;
+    user-select: none;
 }
 
 .group input::-webkit-inner-spin-button,
