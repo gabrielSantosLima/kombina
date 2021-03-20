@@ -16,5 +16,19 @@ li{
 }
 
 .group input[type=number]{
+    width: 2px;
    -moz-appearance: textfield; 
+}
+
+.group{
+    animation-name: fadeOnAddGroup;
+    animation-duration: 0.8s;
+}
+
+@keyframes fadeOnAddGroup {
+    from{
+        transform: scale(0.9);
+    }to{
+        transform: scale(1);
+    }
 }
