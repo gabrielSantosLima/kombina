@@ -1,5 +1,5 @@
-const _ = require('lodash')
-const Combination = require('./Combination')()
+const { concat } = require('lodash')
+const { combine } = require('./Combination')()
 
 module.exports = function Input(){
 
@@ -7,11 +7,11 @@ module.exports = function Input(){
 		checkGroupSize(groups, groupSize)
 		checkCombinationSize(groups, combination)
 		checkForRepetition(groups)
-		return Combination.combine(groups, combination)
+		return combine(groups, combination)
 	}
 
 	function checkForRepetition(groups){
-		const totalNumbers = _.concat(...groups)
+		const totalNumbers = concat(...groups)
 		for(const number of totalNumbers){
 			const hasDuplicate = totalNumbers.filter(n => n === number).length > 1
 			if(hasDuplicate){
@@ -30,7 +30,7 @@ module.exports = function Input(){
 	}
 	
 	function checkCombinationSize(groups, combination){
-		const totalNumbers = _.concat(...groups)
+		const totalNumbers = concat(...groups)
 		const hasNotAllowedSize = totalNumbers.length < combination
 		if(hasNotAllowedSize){
 			throw new Error('A sequência de números não possui números suficientes.')

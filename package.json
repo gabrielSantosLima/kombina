@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "test": "jest",
-    "start": "webpack serve --hot --no-stats --mode development",
+    "start": "webpack serve --hot --open --no-stats --mode development",
     "lint": "eslint src --ext js --fix",
     "build": "webpack --mode production --config webpack.config.js"
   },
