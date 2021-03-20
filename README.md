@@ -9,18 +9,13 @@
 </p>
 
 ## Tópicos
-- <a href="#sobre">Sobre</a>
 - <a href="#funcionalidades">Funcionalidades</a>
 - <a href="#instalação">Instalação</a>
-- <a href="#autor">Autor</a>
-
-## Sobre
-Uma aplicação para gerar a combinação de *n* grupos com *n* elementos numéricos 
+- <a href="#autor">Autor</a> 
 
 ## Funcionalidades
-- Ler os grupos de números
-- Gerar uma sequência de elementos com base no grupo de números
-- Ordenar a sequência gerada de modo sequencial
+- Ler grupos de números
+- Gerar uma sequência ordenada de combinações com estes grupos
 - Exportar resultado para um arquivo **.txt**
 
 ## Instalação
