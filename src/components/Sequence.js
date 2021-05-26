@@ -1,8 +1,9 @@
-module.exports = function Sequence(){
+module.exports = function Sequence({ sequence = [] }){
 	
 	function render(){
-		return `
-		`
+		return `<div class="card m-2 p-2 sequence">
+		${sequence.toString()}
+		</div>`
 	}
 
 	return render()
