@@ -1,5 +1,8 @@
 const Group = require('../components/Group')
 const SavedSequence = require('../components/SavedSequence')
+const Sequence = require('../components/Sequence')
+
+const { onCombine } = require('./Input')()
 
 module.exports = function Interface(){
 	const DEFAULT_GROUP_SIZE = 1
@@ -18,6 +21,7 @@ module.exports = function Interface(){
 	const inputGroupSize = getDOMElement('.ipt-group-size')
 	const inputSequenceSize = getDOMElement('.ipt-sequence-size')
 	const textSizeOfGroups = getDOMElement('.size-of-groups')
+	const divSequences = getDOMElement('.sequences')
 
 	function init(){	
 		addEvents()
@@ -26,6 +30,10 @@ module.exports = function Interface(){
 	
 	function getDOMElement(selectors){
 		return document.querySelector(selectors)
+	}
+
+	function getDOMElements(selectors){
+		return document.querySelectorAll(selectors)
 	}
 
 	function loadSavedSequences(){
@@ -55,16 +63,30 @@ module.exports = function Interface(){
 
 	function onGenerateSequences(button){
 		button.addEventListener('click', () => {
-			console.log(sequenceSize)
 			// get numbers of groups
+			const groups = getDOMElements('.group')
+			let numbers = []
+
+			for(const group of groups){
+				let groupN = [] 
+				const inputs = group.querySelectorAll('input')
+				inputs.forEach(input => {
+					groupN.push(parseInt(input.value))
+				})
+				numbers.push(groupN)
+			}
 			// generate sequences
+			const sequences = onCombine(numbers, sequenceSize, groupSize)
 			// show result
+			for(const sequence of sequences){
+				divSequences.innerHTML += Sequence({sequence})
+			}
 		})
 	}
 
 	function setSequenceSize(input){
 		input.addEventListener('change', () => {
-			sequenceSize = input.value
+			sequenceSize = parseInt(input.value)
 		})
 	}
 
@@ -77,7 +99,7 @@ module.exports = function Interface(){
 
 	function changeGroupSize(input){
 		input.addEventListener('change', () => {
-			groupSize = input.value || DEFAULT_GROUP_SIZE
+			groupSize = parseInt(input.value) || DEFAULT_GROUP_SIZE
 		})
 	}
 	

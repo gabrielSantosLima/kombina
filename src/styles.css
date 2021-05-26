@@ -25,6 +25,10 @@ li{
     animation-duration: 0.8s;
 }
 
+.sequence{
+    max-width: 25%;
+}
+
 @keyframes fadeOnAddGroup {
     from{
         transform: scale(0.9);
